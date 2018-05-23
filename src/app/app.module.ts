@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AmexioWidgetModule} from 'amexio-ng-extensions';
 
 import { AppComponent } from './app.component';
 
@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AmexioWidgetModule
   ],
   providers: [],
   bootstrap: [AppComponent]
