@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('amexio-ng-base-app App', () => {
+describe('testapp App', () => {
   let page: AppPage;
 
   beforeEach(() => {
