@@ -15,14 +15,13 @@ export class TestuiComponent implements OnInit{
   constructor(private http: HttpClient) {
     this.testuiModel=new TestuiModel();
        }
-  onBlur_email(eventData:any){} 
-  input_email(eventData:any){} 
-  focus_email(eventData:any){} 
+  onBlur_login(eventData:any){} 
+  input_login(eventData:any){} 
+  focus_login(eventData:any){} 
   onBlur_password(eventData:any){} 
   input_password(eventData:any){} 
   focus_password(eventData:any){} 
-  onClick_cancel(eventData:any){} 
-  onClick_login(eventData:any){} 
+  onClick_loginBtn(eventData:any){} 
   ngOnInit(){
   }
  
@@ -30,4 +29,4 @@ export class TestuiComponent implements OnInit{
    
 }
 export class TestuiModel{
-  email: string;  password: string; }
+  login: string;  password: string; }
