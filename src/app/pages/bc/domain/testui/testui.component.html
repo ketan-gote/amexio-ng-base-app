@@ -1,0 +1,32 @@
+<amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+    <amexio-header>
+        Login Page
+    </amexio-header>
+    <amexio-body>
+        <amexio-row>
+            <amexio-column size="12">
+                <amexio-email-input [field-label]="'Login Id / Email Id'" [(ngModel)]="testuiModel.email" name="testuiModel.email" [place-holder]="'Login Id'" [allow-blank]="true" [font-size]="10" [has-label]="true" (onBlur)="onBlur_email($event)" (input)="input_email($event)"
+                    (focus)="focus_email($event)">
+                </amexio-email-input>
+            </amexio-column>
+        </amexio-row>
+
+        <amexio-row>
+            <amexio-column size="12">
+                <amexio-password-input [field-label]="'Password'" [(ngModel)]="testuiModel.password" name="testuiModel.password" [place-holder]="'Password'" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true" (onBlur)="onBlur_password($event)"
+                    (input)="input_password($event)" (focus)="focus_password($event)">
+                </amexio-password-input>
+            </amexio-column>
+        </amexio-row>
+
+
+    </amexio-body>
+
+    <amexio-action>
+        <amexio-button [label]="'Cancel'" [type]="'default'" [tooltip]="'button'" [size]="'default'" [form-bind]="'cancel'" (onClick)="onClick_cancel($event)">
+        </amexio-button>
+        <amexio-button [label]="'Login'" [type]="'red'" [tooltip]="'button'" [size]="'default'" [form-bind]="'login'" (onClick)="onClick_login($event)">
+        </amexio-button>
+
+    </amexio-action>
+</amexio-card>
