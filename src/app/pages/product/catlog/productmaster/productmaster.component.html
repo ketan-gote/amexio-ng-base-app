@@ -1,0 +1,37 @@
+<amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+    <amexio-header>
+        Product Master Changed
+    </amexio-header>
+    <amexio-body>
+        <amexio-row>
+            <amexio-column size="6">
+                <amexio-text-input [field-label]="'Product Name'" [(ngModel)]="productmasterModel.productName" name="productmasterModel.productName" [place-holder]="'please enter product'" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true"
+                    (onBlur)="onBlur_productName($event)" (input)="input_productName($event)" (focus)="focus_productName($event)">
+                </amexio-text-input>
+            </amexio-column>
+            <amexio-column size="6">
+                <amexio-text-input [field-label]="'Product Type'" [(ngModel)]="productmasterModel.ptype" name="productmasterModel.ptype" [place-holder]="'Please enter product type'" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true"
+                    (onBlur)="onBlur_ptype($event)" (input)="input_ptype($event)" (focus)="focus_ptype($event)">
+                </amexio-text-input>
+            </amexio-column>
+        </amexio-row>
+
+        <amexio-row>
+            <amexio-column size="12">
+                <amexio-textarea-input [field-label]="'Product Description'" [(ngModel)]="productmasterModel.desc" name="productmasterModel.desc" [allow-blank]="true" [font-size]="10" [has-label]="true" [columns]="'2'" (onBlur)="onBlur_desc($event)" (input)="input_desc($event)"
+                    (focus)="focus_desc($event)">
+                </amexio-textarea-input>
+            </amexio-column>
+        </amexio-row>
+
+
+    </amexio-body>
+
+    <amexio-action>
+        <amexio-button [label]="'Cancel'" [icon]="'fa fa-close fa 2x'" [type]="'default'" [tooltip]="'button'" [size]="'default'" [form-bind]="'cancel'" (onClick)="onClick_cancel($event)">
+        </amexio-button>
+        <amexio-button [label]="'Save'" [icon]="'fa fa-save fa 2x'" [type]="'theme-color'" [tooltip]="'button'" [size]="'default'" [form-bind]="'save'" (onClick)="onClick_save($event)">
+        </amexio-button>
+
+    </amexio-action>
+</amexio-card>
