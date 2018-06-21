@@ -1,6 +1,6 @@
 /**
- * Created by: deepali arvind
- * Date: 20/06/2018
+ * Created by: Demo User
+ * Date: 21/06/2018
  * Organization: Individual	
  */
 import {Component, OnInit} from '@angular/core';
@@ -43,9 +43,7 @@ this.employeedetailspageModel.department =response.response.departmentId;
  } 
   ngOnInit(){
   }
- 
+ }
 
-   
-}
 export class EmployeedetailspageModel{
   employeeList: string;  firstName: string;  lastName: string;  age: number;  email: string;  employeeId: number;  department: string; }

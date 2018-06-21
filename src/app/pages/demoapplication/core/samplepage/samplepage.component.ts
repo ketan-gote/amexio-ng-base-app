@@ -1,6 +1,6 @@
 /**
- * Created by: deepali arvind
- * Date: 20/06/2018
+ * Created by: Demo User
+ * Date: 21/06/2018
  * Organization: Individual	
  */
 import {Component, OnInit} from '@angular/core';
@@ -43,10 +43,8 @@ SaveBindResponse_1(response: any){
 
  } 
   ngOnInit(){
- 	  }
- 	 	
+ 		  }
+ 	 	}
 
-   
-}
 export class SamplepageModel{
   firstName: string;  lastName: string;  genderId: string;  age: number;  phone: string;  email: string;  id: number;  department: string; }
