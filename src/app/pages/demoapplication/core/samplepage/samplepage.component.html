@@ -1,0 +1,60 @@
+<amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+    <amexio-header>
+        Sample Page
+    </amexio-header>
+    <amexio-body>
+        <amexio-row>
+            <amexio-column size="6">
+                <amexio-text-input [field-label]="'First Name'" [(ngModel)]="samplepageModel.firstName" name="samplepageModel.firstName" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+                </amexio-text-input>
+            </amexio-column>
+            <amexio-column size="6">
+                <amexio-text-input [field-label]="'Last Name'" [(ngModel)]="samplepageModel.lastName" name="samplepageModel.lastName" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+                </amexio-text-input>
+            </amexio-column>
+        </amexio-row>
+
+        <amexio-row>
+            <amexio-column size="6">
+                <amexio-radio-group [field-label]="'Gender'" name="samplepageModel.genderId" [display-field]="'genderLabel'" [value-field]="'genderId'" [data]="radiogroupData" [horizontal]="true">
+                </amexio-radio-group>
+            </amexio-column>
+            <amexio-column size="6">
+                <amexio-number-input [field-label]="'Age'" [(ngModel)]="samplepageModel.age" name="samplepageModel.age" [allow-blank]="true" [font-size]="10" [has-label]="true" [min-value]="0" [max-value]="20">
+                </amexio-number-input>
+            </amexio-column>
+        </amexio-row>
+
+        <amexio-row>
+            <amexio-column size="6">
+                <amexio-text-input [field-label]="'Phone'" [(ngModel)]="samplepageModel.phone" name="samplepageModel.phone" [allow-blank]="true" [min-length]="0" [max-length]="20" [font-size]="10" [has-label]="true">
+                </amexio-text-input>
+            </amexio-column>
+            <amexio-column size="6">
+                <amexio-email-input [field-label]="'Email'" [(ngModel)]="samplepageModel.email" name="samplepageModel.email" [allow-blank]="true" [font-size]="10" [has-label]="true">
+                </amexio-email-input>
+            </amexio-column>
+        </amexio-row>
+
+        <amexio-row>
+            <amexio-column size="6">
+                <amexio-number-input [field-label]="'Employee Id'" [(ngModel)]="samplepageModel.id" name="samplepageModel.id" [allow-blank]="true" [font-size]="10" [has-label]="true" [min-value]="0" [max-value]="20">
+                </amexio-number-input>
+            </amexio-column>
+            <amexio-column size="6">
+                <amexio-dropdown [(ngModel)]="samplepageModel.department" name="samplepageModel.department" [field-label]="'Department'" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/dept/findall'" [http-method]="'get'" [display-field]="'name'" [value-field]="'id'">
+                </amexio-dropdown>
+            </amexio-column>
+        </amexio-row>
+
+
+    </amexio-body>
+
+    <amexio-action>
+        <amexio-button [label]="'Cancel'" [type]="'default'" [tooltip]="'Cancel'" [size]="'default'" [form-bind]="'cancel'">
+        </amexio-button>
+        <amexio-button [label]="'Save'" [type]="'theme-color'" [tooltip]="'button'" [size]="'default'" [form-bind]="'Save'" (onClick)="onClick_Save($event)">
+        </amexio-button>
+
+    </amexio-action>
+</amexio-card>
