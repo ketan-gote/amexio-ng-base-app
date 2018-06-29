@@ -7,22 +7,22 @@ import {Component, OnInit} from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 @Component(
 {
-	selector: 'formlayout',
-	templateUrl: 'formlayout.component.html'
+	selector: 'cardui',
+	templateUrl: 'cardui.component.html'
 })
-export class FormlayoutComponent implements OnInit
+export class CarduiComponent implements OnInit
 {
-	formlayoutModel:FormlayoutModel;
+	carduiModel:CarduiModel;
 	
 	constructor(private http: HttpClient)
 	{
-		this.formlayoutModel=new FormlayoutModel();
+		this.carduiModel=new CarduiModel();
 	}
 	ngOnInit()
 	{
 	}
 }
 
-export class FormlayoutModel
+export class CarduiModel
 {
 }

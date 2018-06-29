@@ -1,0 +1,49 @@
+<amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+    <amexio-header>
+        Card Header
+    </amexio-header>
+    <amexio-body>
+        <amexio-row>
+            <amexio-column size="6">
+                <amexio-dropdown [(ngModel)]="samplepagedemoModel.country" name="samplepagedemoModel.country" [search]="true" [field-label]="'Country'" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/country/findall'" [http-method]="'get'" [data]="country_Data"
+                    [display-field]="'countryName'" [value-field]="'id'" (click)="click_country($event)">
+                </amexio-dropdown>
+            </amexio-column>
+            <amexio-column size="6">
+                <amexio-dropdown [(ngModel)]="samplepagedemoModel.states" name="samplepagedemoModel.states" [search]="true" [field-label]="'States'" [data]="states_Data" [display-field]="'stateName'" [value-field]="'stateId'">
+                </amexio-dropdown>
+            </amexio-column>
+        </amexio-row>
+
+        <amexio-row>
+            <amexio-column size="12">
+                <amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+                    <amexio-header>
+                        Daily
+                    </amexio-header>
+                    <amexio-body>
+                        <amexio-chart-pie [data]="activitychartLocalData" [height]="'400px'" [width]="'100%'">
+                            <amexio-chart-title [title]="'Daily Activity'" [font-size]="15" [bold]="false" [italic]="false">
+                            </amexio-chart-title>
+
+                            <amexio-chart-legend [max-lines]="2" [font-name]="'Times-Roman'" [font-size]="18" [bold]="false">
+                            </amexio-chart-legend>
+
+                        </amexio-chart-pie>
+
+                    </amexio-body>
+
+                    <amexio-action>
+
+                    </amexio-action>
+                </amexio-card>
+            </amexio-column>
+        </amexio-row>
+
+
+    </amexio-body>
+
+    <amexio-action>
+
+    </amexio-action>
+</amexio-card>

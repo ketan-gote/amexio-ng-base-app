@@ -1,5 +1,5 @@
 /**
- * Created by: Demo User
+ * Created by: Ashwini Agre
  * Date: 29/06/2018
  * Organization: Individual	
  */
@@ -13,8 +13,9 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 export class DashboardComponent implements OnInit
 {
 	dashboardModel:DashboardModel;
+	_rootpane:any;
+	companyActichartLocalData:any;
 	
-	_rootpane:any; 
 	constructor(private http: HttpClient)
 	{
 		this.dashboardModel=new DashboardModel();
@@ -61,6 +62,20 @@ export class DashboardComponent implements OnInit
 	ngOnInit()
 	{
 		this.onLoad_rootpane();
+		this.fetchcompanyActichartLocalDataChart();
+	}
+	fetchcompanyActichartLocalDataChart()
+	{
+		let reponseData: any;
+		this.http.get('https://api.myjson.com/bins/18hpt2').subscribe(response => 
+		{
+			reponseData = response;
+		},
+	(err) => {},
+		() => {
+			this.companyActichartLocalData = reponseData.data;
+		}
+		);
 	}
 }
 
