@@ -1,0 +1,41 @@
+<amexio-row>
+    <amexio-column size="6">
+        <amexio-card [footer]="false" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+            <amexio-header>
+                Company Performance
+            </amexio-header>
+            <amexio-body>
+                <amexio-chart-bar *ngIf="companyPerformancechartLocalData" [data]="companyPerformancechartLocalData" [height]="'400px'" [width]="'100%'">
+
+                    <amexio-chart-title [title]="'Company Performance'" [font-size]="15">
+                    </amexio-chart-title>
+
+                    <amexio-chart-legend [max-lines]="2" [font-name]="'Times-Roman'" [font-size]="18">
+                    </amexio-chart-legend>
+
+                </amexio-chart-bar>
+
+            </amexio-body>
+
+        </amexio-card>
+    </amexio-column>
+    <amexio-column size="6">
+        <amexio-card [footer]="false" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+            <amexio-header>
+                Daily Activity
+            </amexio-header>
+            <amexio-body>
+                <amexio-chart-pie *ngIf="dailyActivitychartLocalData" [data]="dailyActivitychartLocalData" [height]="'400px'" [width]="'100%'">
+                    <amexio-chart-title [title]="'Daily Activity'" [font-size]="15" [bold]="false" [italic]="false">
+                    </amexio-chart-title>
+
+                    <amexio-chart-legend [max-lines]="2" [font-name]="'Times-Roman'" [font-size]="18" [bold]="false">
+                    </amexio-chart-legend>
+
+                </amexio-chart-pie>
+
+            </amexio-body>
+
+        </amexio-card>
+    </amexio-column>
+</amexio-row>
