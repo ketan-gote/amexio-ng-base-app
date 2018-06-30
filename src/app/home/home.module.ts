@@ -48,6 +48,12 @@ const routes: Routes = [
 	     	{
      	path: 'core/performanceanalysis', loadChildren: './../pages/sampleapp/core/performanceanalysis/performanceanalysis.module#PerformanceanalysisModule'
      	},	
+	     	{
+     	path: 'core/cardui', loadChildren: './../pages/sampleapp/core/cardui/cardui.module#CarduiModule'
+     	},	
+	     	{
+     	path: 'core/samplepagedemo', loadChildren: './../pages/sampleapp/core/samplepagedemo/samplepagedemo.module#SamplepagedemoModule'
+     	},	
 	    ]
   }
 ];
