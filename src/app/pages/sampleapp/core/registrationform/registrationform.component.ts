@@ -1,6 +1,6 @@
 /**
- * Created by: Demo User
- * Date: 29/06/2018
+ * Created by: Ashwini Agre
+ * Date: 30/06/2018
  * Organization: Individual	
  */
 import {Component, OnInit} from '@angular/core';
@@ -13,14 +13,12 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 export class RegistrationformComponent implements OnInit
 {
 	registrationformModel:RegistrationformModel;
+	radiogroupData:any;
 	
-	radiogroupData:any; 
-	stateId_Data:any; 
 	constructor(private http: HttpClient)
 	{
 		this.registrationformModel=new RegistrationformModel();
 	this.radiogroupData=[{"genderId":"1","genderName":"Male"},{"genderId":"2","genderName":"Female"}];
-		this.stateId_Data=[];
 	}
 	click_countryId(eventData:any)
 	{ 

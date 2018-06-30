@@ -1,6 +1,6 @@
 /**
  * Created by: Ashwini Agre
- * Date: 29/06/2018
+ * Date: 30/06/2018
  * Organization: Individual	
  */
 import {Component, OnInit} from '@angular/core';
@@ -14,7 +14,6 @@ export class DashboardComponent implements OnInit
 {
 	dashboardModel:DashboardModel;
 	_rootpane:any;
-	companyActichartLocalData:any;
 	
 	constructor(private http: HttpClient)
 	{
@@ -62,20 +61,6 @@ export class DashboardComponent implements OnInit
 	ngOnInit()
 	{
 		this.onLoad_rootpane();
-		this.fetchcompanyActichartLocalDataChart();
-	}
-	fetchcompanyActichartLocalDataChart()
-	{
-		let reponseData: any;
-		this.http.get('https://api.myjson.com/bins/18hpt2').subscribe(response => 
-		{
-			reponseData = response;
-		},
-	(err) => {},
-		() => {
-			this.companyActichartLocalData = reponseData.data;
-		}
-		);
 	}
 }
 
