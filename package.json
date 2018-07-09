@@ -1,5 +1,5 @@
 {
-    "name": "employeeportal",
+    "name": "testnewproj",
     "version": "0.0.0",
     "license": "MIT",
     "scripts": {
@@ -21,7 +21,7 @@
         "@angular/platform-browser": "^5.2.0",
         "@angular/platform-browser-dynamic": "^5.2.0",
         "@angular/router": "^5.2.0",
-        "amexio-ng-extensions": "4.1.10",
+        "amexio-ng-extensions": "4.2.8",
 	"font-awesome": "4.7.0",
         "core-js": "^2.4.1",
         "rxjs": "^5.5.6",
