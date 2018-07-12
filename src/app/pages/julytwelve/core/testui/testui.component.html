@@ -1,0 +1,29 @@
+<amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+    <amexio-header>
+        Test Ui
+    </amexio-header>
+    <amexio-body>
+        <amexio-dropdown [(ngModel)]="testuiModel.employee" name="testuiModel.employee" [search]="true" [field-label]="'Dropdown'" [http-url]="'https://uat.amexio.org:8991/rest-sample-app/api/emp/findall'" [http-method]="'get'" [display-field]="'firstName'" [value-field]="'id'">
+        </amexio-dropdown>
+
+    </amexio-body>
+
+    <amexio-action>
+        <amexio-button [label]="'Navigate'" [type]="'default'" [tooltip]="'button'" [size]="'default'" [form-bind]="'navigate'" (onClick)="onClick_navigate($event)">
+        </amexio-button>
+        <amexio-button [label]="'Notification'" [type]="'default'" [tooltip]="'button'" [size]="'default'" [form-bind]="'Noto'" (onClick)="onClick_Noto($event)">
+        </amexio-button>
+        <amexio-button [label]="'Service'" [type]="'default'" [tooltip]="'button'" [size]="'default'" [form-bind]="'service'" (onClick)="onClick_service($event)">
+        </amexio-button>
+
+    </amexio-action>
+</amexio-card>
+<amexio-notification [data]="successMsgData" [vertical-position]="'top'" [horizontal-position]="'right'" [close-on-escape]="true" [background-color]="'green'" [auto-dismiss-msg]="true" [auto-dismiss-msg-interval]="4000">
+    <ng-template #amexioNotificationTemplates let-row="row">
+        <amexio-box>
+            <amexio-image [icon-class]="'fa fa-check'">
+            </amexio-image> &nbsp;&nbsp;
+            <amexio-label size="small-bold" font-color="black">{{row}}</amexio-label>
+        </amexio-box>
+    </ng-template>
+</amexio-notification>

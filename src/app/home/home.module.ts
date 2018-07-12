@@ -1,5 +1,5 @@
 /**
- * Created by sagar on 12/2/18.
+ * Created by Sagar Jadhav.
  */
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
@@ -12,8 +12,16 @@ import {AmexioWidgetModule} from "amexio-ng-extensions";
 const routes: Routes = [
   { path: '', component:HomeComponent,
     children: [
-
-    ]
+          	{
+     	path: 'core/testui', loadChildren: './../pages/julytwelve/core/testui/testui.module#TestuiModule'
+     	},	
+	     	{
+     	path: 'core/newui', loadChildren: './../pages/julytwelve/core/newui/newui.module#NewuiModule'
+     	},	
+	     	{
+     	path: 'core/countrystate', loadChildren: './../pages/julytwelve/core/countrystate/countrystate.module#CountrystateModule'
+     	},	
+	    ]
   }
 ];
 
